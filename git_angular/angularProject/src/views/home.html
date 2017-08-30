@@ -1,0 +1,208 @@
+<div id="carousel">
+    <div id="content">
+        <div class="current"><img ng-src="{{slides[0].img}}"></div>
+        <div><img ng-src="{{slides[1].img}}"></div>
+    </div>
+    <ol id="control">
+        <li class="sel"></li>
+        <li></li>
+    </ol>
+    <div class="arrow arrowLeft" id="aL"><img src="img/arrow-left.png"></div>
+    <div class="arrow arrowRight" id="aR"><img src="img/arrow-right.png"></div>
+    </div>
+
+<div class="hot">
+        <div class="hot_box">
+            <div class="hot_l">
+                <div class="hot_l_t">
+                    <h5>热门项目</h5>
+                    <a href="#">查看更多</a>
+                </div>
+                <div class="hot_l_img">
+                    <img ng-src="{{hot[1].img}}">
+                </div>
+                <div class="hot_l_r">
+                    <div class="hot_l_r_t">
+                        <h5>{{hot[1].name}}</h5>
+                        <span>by {{hot[1].fname}}</span>
+                        <p>{{hot[1].desc}}</p>
+                    </div>
+                    <div class="r_b">
+                        <span><span>话剧</span></span>
+                        <span><span>卫视推荐</span></span>
+                        <div class="cent">
+                            <div class="Bar" style="width:{{hot[1].sp}}%;"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>{{hot[1].sp}}%</p>
+                                <span>进度</span>
+                            </li>
+                            <li>
+                                <p>￥{{hot[1].rprice}}</p>
+                                <span>支持金额</span>
+                            </li>
+                            <li>
+                                <p>{{hot[1].rnum}}</p>
+                                <span>支持者</span>
+                            </li>
+                            <li>
+                                <p>{{hot[1].rday}}</p>
+                                <span>剩余天数</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="hot_r">
+                <li>微电影</li>
+                <li>电影</li>
+                <li>电视剧</li>
+                <li>传统戏曲</li>
+                <li>话剧</li>
+                <li>书画</li>
+                <li>相声</li>
+                <li>戏剧</li>
+                <li>音乐剧</li>
+                <li>纪录片</li>
+            </ul>
+        </div>
+    </div>
+
+<div class="new">
+        <div class="new_box">
+            <div class="new_t">
+                <h5>卫视主推</h5>
+                <a ui-sref="list">查看全部</a>
+            </div>
+            <ul class="new_ul">
+                <li class="new_li">
+                    <div class="new_img">
+                        <img ng-src="{{new[0].img}}">
+                    </div>
+                    <div class="new_m">
+                        <h5>{{new[0].name}}</h5>
+                        <span>by {{new[0].fname}}</span>
+                        <p>{{new[0].desc}}</p>
+                    </div>
+                    <div class="new_b">
+                        <span><span>音乐剧</span></span>
+                        <div class="cent">
+                            <div class="Bar" style="width:{{new[0].sp}}%;"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>{{hot[0].sp}}%</p>
+                                <span>进度</span>
+                            </li>
+                            <li>
+                                <p>￥{{hot[0].rprice}}</p>
+                                <span>支持金额</span>
+                            </li>
+                            <li>
+                                <p>{{hot[0].rday}}</p>
+                                <span>剩余天数</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="new_li">
+                    <div class="new_img">
+                        <img ng-src="{{new[1].img}}">
+                    </div>
+                    <div class="new_m">
+                        <h5>{{new[1].name}}</h5>
+                        <span>by {{new[1].fname}}</span>
+                        <p>{{new[1].desc}}</p>
+                    </div>
+                    <div class="new_b">
+                        <span><span>音乐剧</span></span>
+                        <div class="cent">
+                            <div class="Bar" style="width:{{new[1].sp}}%;"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>{{hot[1].sp}}%</p>
+                                <span>进度</span>
+                            </li>
+                            <li>
+                                <p>￥{{hot[1].rprice}}</p>
+                                <span>支持金额</span>
+                            </li>
+                            <li>
+                                <p>{{hot[1].rday}}</p>
+                                <span>剩余天数</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="new_li">
+                    <div class="new_img">
+                        <img ng-src="{{new[2].img}}">
+                    </div>
+                    <div class="new_m">
+                        <h5>{{new[2].name}}</h5>
+                        <span>by {{new[2].fname}}</span>
+                        <p>{{new[2].desc}}</p>
+                    </div>
+                    <div class="new_b">
+                        <spans><span>音乐剧</span></spans>
+                        <div class="cent">
+                            <div class="Bar" style="width:{{new[2].sp}}%;"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>{{hot[2].sp}}%</p>
+                                <span>进度</span>
+                            </li>
+                            <li>
+                                <p>￥{{hot[2].rprice}}</p>
+                                <span>支持金额</span>
+                            </li>
+                            <li>
+                                <p>{{hot[2].rday}}</p>
+                                <span>剩余天数</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<div class="unit">
+    <div class="unit_box">
+            <h5>合作单位</h5>
+        <ul>
+            <li>
+                <a href="#">
+                    <img ng-src="{{unit[0].img}}">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img ng-src="{{unit[1].img}}">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img ng-src="{{unit[2].img}}">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img ng-src="{{unit[3].img}}">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img ng-src="{{unit[4].img}}">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+

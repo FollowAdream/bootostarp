@@ -1,0 +1,45 @@
+<div ng-controller="RegController" class="reg">
+    <form method="post" class="reg_box" name="signUp" novalidate>
+        <h5>注册</h5>
+        <div class="input">
+            <div class="phone">
+                <input type="text" ng-model="phone" name="phone" required ng-pattern="/^1[35678][0-9]{9}$/" placeholder="请输入您的手机号码">
+                <p ng-show="signUp.phone.$dirty && signUp.phone.$invalid">
+                    <p ng-show="signUp.phone.$error.required">手机号码不能为空</p>
+                    <p ng-show="signUp.phone.$error.pattern">手机号码长度不符合规范</p>
+                </p>
+            </div>
+            <div class="password">
+                <input type="password" ng-model="password" name="password" ng-minlength="6" required placeholder="请输入密码">
+                <p ng-show="signUp.password.$dirty && signUp.password.$invalid">密码长度不能小于6位</p>
+            </div>
+            <div class="passwordRepeat">
+                <input type="password" name="passwordRepeat" ng-model="passwordRepeat" required placeholder="确认密码">
+                <p ng-show="password!=passwordRepeat">两次密码不一致</p>
+            </div>
+            <input type="button" ng-click="reg(signUp.$valid && password==passwordRepeat && agreeRule)" value="注册" class="button"><br>
+            <input type="checkbox" class="checkbox" style="vertical-align: middle" ng-model="agreeRule"><span>同意《全民创造用户协议》</span>
+        </div>
+        <div class="dsf">
+            <div class="line1">
+                <span>第三方登录</span>
+            </div>
+
+            <ul>
+                <li>
+                    <img src="img/weixin.png" alt="">
+                </li>
+                <li>
+                    <img src="img/qq.png" alt="">
+                </li>
+                <li>
+                    <img src="img/weibo.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="xyh">
+            <span>已有账户?</span>
+            <a ui-sref="login">登录</a>
+        </div>
+    </form>
+</div>

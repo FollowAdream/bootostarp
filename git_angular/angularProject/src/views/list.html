@@ -1,0 +1,64 @@
+<div class="option">
+    <div class="option_box">
+        <ul class="option_1">
+            <li ng-repeat="type in arrtype" ng-click="choose(type)">{{type}}</li>
+        </ul>
+
+        <ul class="option_2">
+            <li>筹资中</li>
+            <li>即将结束</li>
+            <li>已结束</li>
+        </ul>
+
+        <ul class="option_3">
+            <li>最新</li>
+            <li>热门</li>
+            <li>结束时间</li>
+        </ul>
+    </div>
+</div>
+
+<div class="list">
+    <div class="list_box">
+        <ul class="list_ul">
+            <li ng-repeat="item in listData | filter:orderna" class="list_li">
+                <img ng-src="{{item.img}}">
+                <div class="list_m">
+                    <h5>{{item.name}}</h5>
+                    <span>by {{item.fname}}</span>
+                    <p>{{item.desc}}</p>
+                </div>
+                <div class="list_b">
+                    <span><span>音乐剧</span></span>
+                    <div class="cent">
+                        <div class="Bar" style="width:{{item.sp}}%;"></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>{{item.sp}}%</p>
+                            <span>进度</span>
+                        </li>
+                        <li>
+                            <p>￥{{item.rprice}}</p>
+                            <span>支持金额</span>
+                        </li>
+                        <li>
+                            <p>{{item.rday}}</p>
+                            <span>剩余天数</span>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="clear"></div>
+        <div class="myPage">
+            <ul>
+                <li ng-repeat="p in arr" style="float: left;"
+                ng-click="changePage($index+1)" ng-class="{active:$index+1==page}">{{p}}</li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
