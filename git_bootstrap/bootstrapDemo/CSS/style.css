@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin-top: 0;
+    padding-top: 200px;
+    color: #fff;
+    font-size: 22px;
+}
+
+header a#logo{
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    background: url(../img/logo@2x.png) no-repeat;
+    background-size: auto 40px;
+    margin: 10px;
+    transition: all .5s;
+}
+
+/* 主体部分*/
+.main-body{
+
+    min-height: 1200px;
+}
+
+.main-body .page1{
+    background: url(../img/home.jpg);
+    text-align: center;
+    min-height: 700px;
+}
+
+.mybtn{
+    width: 480px;
+    height: 70px;
+    color: #fff;
+
+    border: none;
+    margin-bottom: 10px;
+}
+
+.btn-red{
+    background: red;
+}
+
+.btn-null{
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-default:hover{
+    color: #fff;
+    background: #ddd;
+}
+
+/*page2*/
+.nav-tabs{
+    width: 88%;
+    border-bottom: none;
+}
+
+.nav-tabs > li{
+    float: none;
+}
+
+.nav-tabs > li > a{
+    border-bottom: 2px solid #ddd;
+    margin-right: 0;
+    border-radius: 0;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover{
+    background: #eee;
+    border: 1px solid transparent;
+    border-bottom: 2px solid red;
+}
+
+
+.tab-content > .tab-pane{
+    width: 84%;
+    margin: 20px auto;
+}
+
+/*.nav-tabs > li > a:hover*/
+/*.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus*/
+
+/*************************/
+@media (min-width: 768px){
+    header a#logo{
+        background: url(../img/logo-w@2x.png) no-repeat;
+        background-size: 40px;
+    }
+
+    .navbar-default {
+        background: none;
+        border: none;
+    }
+
+    .navbar-nav > li{
+        margin-right: 20px;
+    }
+
+    .navbar-nav > li:last-child{
+        margin-right: 80px;
+    }
+
+    .navbar-default .navbar-nav > li > a{
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .nav > li > a{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav > li > a::after{
+        width: 100%;
+        height: 2px;
+        content: " ";
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .navbar-default .navbar-nav > li > a:hover::after{
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+
+    h2{
+        font-size: 40px;
+    }
+
+    .mybtn{
+        width: 160px;
+    }
+
+
+    
+    .nav-tabs{
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .nav-tabs > li{
+        float: left;
+        width: 33%;
+        text-align: center;
+    }
+
+
+
+}
